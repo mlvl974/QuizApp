@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="col-md-12">
+  <h1>Welcome to ABC-University</h1>
+    <form>
+      <p>
+     <input class="textbox"
+     type="text"
+     placeholder="Username"
+     [(ngModel)] = 'user.username'
+     name = "username">
+    </p>
+
+    <p>
+      <input class="textbox" type="password"
+      placeholder="password"
+      [(ngModel)] = 'user.password'
+      name = "password">
+     </p>
+     
+
+      <button
+        class="btn btn-success"
+       type="submit"
+        (click)="login()"
+      >
+        Login <i class="bi bi-arrow-right"></i>
+      </button>
+
+      <button
+      class="btn btn-success"
+     type="submit"
+      (click)="register()"
+    >
+      Register <i class="bi bi-arrow-right"></i>
+    </button>
+  
+    </form>
+  </div>
+</div>
+

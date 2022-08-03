@@ -1,0 +1,29 @@
+
+
+.container{
+    background-color: #55c5ed;
+    border-radius: 15px;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+ 
+}
+
+.question{
+    width: 100%;
+}
+.options{
+    position: relative;
+    padding-left: 20px;
+}
+#options label{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20x;
+    cursor: pointer;
+}
+
+
+
+
+
+

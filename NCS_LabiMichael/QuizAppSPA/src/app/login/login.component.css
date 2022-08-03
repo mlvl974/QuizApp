@@ -1,0 +1,43 @@
+
+
+.container {
+  border-radius: 48px;
+  padding-top: 16px;
+  background-color: rgba(0, 0, 0, 0.796);
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  top: 20%;
+  height: 45%;
+}
+
+.textbox
+{
+  font-size: 16px;
+  width: 60%;
+  padding: 8px;
+  margin-top: 25px;
+  margin-left: 100px
+}
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+button {
+  background: rgb(255, 149, 0);
+  border-radius: 48px;
+  color: black;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  width: 80%;
+  padding: 10px;
+  margin-top: 48px;
+  margin-left: 60px
+}

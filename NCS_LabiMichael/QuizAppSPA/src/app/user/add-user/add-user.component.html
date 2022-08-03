@@ -1,0 +1,113 @@
+<div class="container">
+  <div class="col-md-6">
+    <h2 class="text-center">{{ UserFormLabel }}</h2>
+
+    <form [formGroup]="addForm">
+
+      <!-- <div class="form-group">
+        <label for="id">User Id:</label>
+        <input type="number" formControlName="id" class="form-control" />
+      </div> -->
+
+    
+      <div class="form-group">
+        <label for="username">username:</label>
+        <input
+          formControlName="username"
+          placeholder="username"
+          name="username"
+          class="form-control"
+          id="username"
+        />
+      </div>
+
+      <span
+        class="help-block"
+        *ngIf="
+          addForm.get('username')?.hasError('required') &&
+          addForm.get('username')?.touched
+        "
+      >
+        Username is required.
+      </span>
+
+      <div class="form-group">
+        <label for="password">password:</label>
+        <input
+          formControlName="password"
+          placeholder="password"
+          name="password"
+          class="form-control"
+          id="password"
+        />
+      </div>
+
+      <span
+        class="help-block"
+        *ngIf="
+          addForm.get('password')?.hasError('required') &&
+          addForm.get('password')?.touched
+        "
+      >
+        Password is required.
+      </span>
+
+      <div class="form-group">
+        <label for="role">Role:</label>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="role">Role:</label>
+      </div>
+      <select formControlName="role">
+        <option [ngValue]="null" disabled>Select Role</option>
+        <option *ngFor="let role of roles">{{role}}</option>
+      </select>
+
+      <span
+      class="help-block"
+      *ngIf="
+        addForm.get('role')?.hasError('required') &&
+        addForm.get('role')?.touched
+      "
+    >
+      Role is required.
+    </span>
+
+      
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          formControlName="email"
+          placeholder="name@gmail.com"
+          name="email"
+          class="form-control"
+          id="email"
+        />
+      </div>
+
+      <span
+      class="help-block"
+      *ngIf="
+        addForm.get('email')?.hasError('email') &&
+        addForm.get('email')?.touched
+      "
+    >
+      Email is required.
+    </span>
+
+      <br />
+      <button
+        class="btn btn-success"
+        [disabled]="addForm.invalid"
+        (click)="onSubmit()"
+      >
+        Save
+      </button>
+
+    
+    </form>
+  </div>
+</div>

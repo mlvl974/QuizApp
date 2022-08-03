@@ -1,0 +1,34 @@
+server:
+  port: 8089
+
+
+eureka: 
+ instance:
+  hostname: localhost
+    
+spring:
+  application:
+    name: api-gateway
+  cloud: 
+   gateway: 
+    routes: 
+     - id: LOGIN-SERVICE
+       uri: lb://LOGIN-SERVICE
+       predicates: 
+        - Path=/abc-university/public/**
+     - id: ADMIN-SERVICE
+       uri: lb://ADMIN-SERVICE
+       predicates: 
+        - Path=/abc-university/admin/**
+     - id: QUESTION-SERVICE
+       uri: lb://QUESTION-SERVICE
+       predicates: 
+        - Path=/abc-university/question/**  
+     - id: STUDENT-SERVICE
+       uri: lb://STUDENT-SERVICE
+       predicates: 
+        - Path=/abc-university/student/**   
+     - id: RESULT-SERVICE
+       uri: lb://RESULT-SERVICE
+       predicates: 
+        - Path=/abc-university/result/**            

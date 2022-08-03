@@ -1,0 +1,20 @@
+
+button {
+  background: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar ul li a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  margin: 16px;
+  position: relative;
+}
+.navbar ul li a:hover {
+  font-weight: 800;
+  border-bottom: solid 1px;
+}
+

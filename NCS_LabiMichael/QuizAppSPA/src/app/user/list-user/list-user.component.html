@@ -1,0 +1,57 @@
+
+<br /><br />
+
+<br /><br />
+<div class="container">
+<div class="col-md-12">
+  <h2>User Details</h2>
+<br>
+  <button
+    (click)="addUser()"
+    style="margin-left: 20px"
+    class="btn btn-success"
+  >
+    <i class="bi bi-plus-square"></i> User
+  </button>
+  <br />
+  <br />
+  <div class="table-responsive table-container table table-striped">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Role</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.userId }}</td>
+          <td>{{ user.username}}</td>
+          <td>{{ user.password }}</td>
+          <td>{{user.role }}</td>
+          <td>{{user.email }}</td>
+
+          <td>
+            <!-- delete btn -->
+            <button (click)="deleteUser(user)" class="btn btn-warning">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+
+            <!-- edit btn -->
+            <button
+              (click)="updateUser(user)"
+              style="margin-left: 20px"
+              class="btn btn-info text-white"
+            >
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

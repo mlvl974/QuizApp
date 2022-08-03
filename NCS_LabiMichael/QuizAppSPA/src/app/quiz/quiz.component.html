@@ -1,0 +1,48 @@
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<div class="container">
+    <div>
+        <h2>Quiz</h2>
+        <h5>{{question.category}}</h5>
+        <div 
+        *ngFor="let question of questions; index as i">
+        <b>Question{{i+1}}:{{question.questionString}}</b>
+     
+
+        <div id="answer{{i+1}}">
+            <label class="options">{{question.option1}}
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="options">{{question.option2}}
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="options">{{question.option3}}
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="options">{{question.option4}}
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="answer">{{question.answer }}
+                <input type="hidden" name="answer">
+
+            </label>
+        </div>
+    </div>
+</div>
+    <div class="">
+        <div id="prev">
+            <button class="btn btn-primary">Previous</button>
+        </div>
+        <div class="">
+            <button class="btn btn-success" style="margin-right: 10px">Next</button>
+        </div>
+        <div class="">
+            <button class="btn btn-success" style="margin-right: 10px">Submit Quiz</button>
+        </div>
+    </div>
+</div>

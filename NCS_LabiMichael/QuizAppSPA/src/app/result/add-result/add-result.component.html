@@ -1,0 +1,176 @@
+<div class="container">
+    <div class="col-md-6">
+      <h2 class="text-center">{{ ResultFormLabel }}</h2>
+  
+      <form [formGroup]="addForm">
+  
+        <!-- <div class="form-group">
+          <label for="id">Question Id:</label>
+          <input type="number" formControlName="questionId" class="form-control" />
+        </div> -->
+  
+      
+        <div class="form-group">
+          <label for="testId">Test Id:</label>
+          <input
+            formControlName="testId"
+            placeholder="testId"
+            name="testId"
+            class="form-control"
+            id="testId"
+          />
+        </div>
+  
+        <span
+          class="help-block"
+          *ngIf="
+            addForm.get('testId')?.hasError('required') &&
+            addForm.get('testId')?.touched
+          "
+        >
+         Test Id is required.
+        </span>
+  
+        <div class="form-group">
+          <label for="userId">User Id:</label>
+          <input
+            formControlName="userId"
+            placeholder="userId"
+            name="userId"
+            class="form-control"
+            id="userId"
+          />
+        </div>
+  
+        <span
+          class="help-block"
+          *ngIf="
+            addForm.get('userId')?.hasError('required') &&
+            addForm.get('userId')?.touched
+          "
+        >
+        User Id is required.
+        </span>
+  
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input
+            formControlName="date"
+            placeholder="dd-mm-yy"
+            name="date"
+            class="form-control"
+            id="date"
+          />
+        </div>
+  
+        <span
+        class="help-block"
+        *ngIf="
+          addForm.get('date')?.hasError('required') &&
+          addForm.get('date')?.touched
+        "
+      >
+        Date is required.
+      </span>
+  
+        
+  
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <input
+            formControlName="category"
+            placeholder="category"
+            name="category"
+            class="form-control"
+            id="category"
+          />
+        </div>
+  
+        <span
+        class="help-block"
+        *ngIf="
+          addForm.get('category')?.hasError('required') &&
+          addForm.get('category')?.touched
+        "
+      >
+        Category is required.
+      </span>
+
+      <div class="form-group">
+        <label for="level">Level:</label>
+        <input
+          formControlName="level"
+          placeholder="basic"
+          name="level"
+          class="form-control"
+          id="level"
+        />
+      </div>
+
+      <span
+      class="help-block"
+      *ngIf="
+        addForm.get('level')?.hasError('required') &&
+        addForm.get('level')?.touched
+      "
+    >
+      Option 2 is required.
+    </span>
+
+    <div class="form-group">
+        <label for="totalScore">Total Score:</label>
+        <input
+          formControlName="totalScore"
+          placeholder="0-100"
+          name="totalScore"
+          class="form-control"
+          id="totalScore"
+        />
+      </div>
+
+      <span
+      class="help-block"
+      *ngIf="
+        addForm.get('totalScore')?.hasError('required') &&
+        addForm.get('totalScore')?.touched
+      "
+    >
+      Option 3 is required.
+    </span>
+  
+    <div class="form-group">
+        <label for="marks">Marks:</label>
+        <input
+          formControlName="marks"
+          placeholder="1-20"
+          name="marks"
+          class="form-control"
+          id="marks"
+        />
+      </div>
+
+      <span
+      class="help-block"
+      *ngIf="
+        addForm.get('marks')?.hasError('required') &&
+        addForm.get('marks')?.touched
+      "
+    >
+      Marks is required.
+    </span>
+
+
+        <br />
+        <button
+          class="btn btn-success"
+          [disabled]="addForm.invalid"
+          (click)="onSubmit()"
+        >
+          Save
+        </button>
+  
+      
+      </form>
+    </div>
+  </div>
+  

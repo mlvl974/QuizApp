@@ -1,0 +1,87 @@
+
+<br /><br />
+
+<br /><br />
+<div class="container">
+<div class="col-md-12">
+  <h2>Question Details</h2>
+<br>
+  <button
+    (click)="addQuestion()"
+    style="margin-left: 20px"
+    class="btn btn-success"
+  >
+   <b><i class="bi bi-plus-square"></i> Question</b> 
+  </button>
+  <br />
+  <br />
+  <div class="table-responsive table-container table table-striped">
+    <div style="margin-left: 700px">
+   
+    
+    <select>
+      <option [ngValue]="null" disabled>Select Category</option>
+      <option *ngFor="let category of categories" [value]="category.name">{{category.name}}</option>
+    </select>
+  
+    <select   style="margin-left: 10px" >
+      <option [ngValue]="null" disabled>Select Level</option>
+      <option *ngFor="let level of levels" [value]="level.name">{{level.name}}</option>
+    </select>
+    <button style="margin-left: 5px" type="submit" >  <b><i class="bi bi-sort-alpha-down"></i> Filter By</b></button>
+  </div>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Question</th>
+          <th>Category</th>
+          <th>Marks</th>
+          <th>Option1</th>
+          <th>Option2</th>
+          <th>Option3</th>
+          <th>Option4</th>
+          <th>Answer</th>
+          <th>Edit</th>
+          <th>Delete</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let question of questions">
+          <!-- <tr *ngFor="let question of questions"> -->
+          <td>{{ question.questionId }}</td>
+          <td>{{ question.questionString}}</td>
+          <td>{{ question.category }}</td>
+          <td>{{question.marks }}</td>
+          <td>{{question.option1 }}</td>
+          <td>{{question.option2 }}</td>
+          <td>{{question.option3 }}</td>
+          <td>{{question.option4 }}</td>
+          <td>{{question.answer }}</td>
+
+         
+          <td>
+            <!-- edit btn -->
+            <button
+              (click)="updateQuestion(question)"
+              style="margin-left: 20px"
+              class="btn btn-info text-white"
+            >
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+          </td>
+
+          <td>
+            <!-- delete btn -->
+            <button (click)="deleteQuestion(question)" class="btn btn-warning">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

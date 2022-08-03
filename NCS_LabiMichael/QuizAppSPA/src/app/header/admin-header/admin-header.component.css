@@ -1,0 +1,29 @@
+
+.navbar
+{
+  background-color: #69c8eb;
+}
+button {
+  background-color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .navbar ul li a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    
+    margin: 16px;
+    position: relative;
+  }
+  .navbar ul li a:hover {
+    font-weight: 800;
+    border-bottom: solid 1px;
+  }
+  

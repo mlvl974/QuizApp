@@ -1,0 +1,42 @@
+.container{
+    background: rgb(223, 228, 228);
+    padding: 1.5rem 0rem;
+    margin-top: 5.4%;
+    text-align: center;
+    letter-spacing: -1px;
+    color: rgb(32, 20, 122);
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+  }
+  h2{
+    font-weight: 900;
+    letter-spacing: -1px;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 15px 0px 15px 0px;
+  }
+  
+  .help-block {
+    color: rgb(197, 18, 18);
+  }
+  button{
+    border-radius: 3rem;
+    color: black;
+    background: rgb(255, 181, 7);
+    border: none;
+    width: 100%;
+    position: static; 
+    margin-top: 3%; 
+  }
+  

@@ -1,0 +1,80 @@
+
+<br /><br />
+
+<br /><br />
+<div class="container">
+<div class="col-md-12">
+  <h2>Result Details</h2>
+<br>
+  <button
+    (click)="addResult()"
+    style="margin-left: 20px"
+    class="btn btn-success"
+  >
+   <b> <i class="bi bi-plus-square"></i> Result</b>
+  </button>
+  <br />
+  <br />
+  <div class="table-responsive table-container table table-striped">
+    <div style="margin-left: 700px">
+   
+    
+      <select>
+        <option [ngValue]="null" disabled>Select Category</option>
+        <option *ngFor="let category of categories" [value]="category.name">{{category.name}}</option>
+      </select>
+    
+      <select   style="margin-left: 10px" >
+        <option [ngValue]="null" disabled>Select Level</option>
+        <option *ngFor="let level of levels" [value]="level.name">{{level.name}}</option>
+      </select>
+      <button style="margin-left: 5px" type="submit" >  <b><i class="bi bi-sort-alpha-down"></i> Filter By</b></button>
+    </div>
+
+
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Test Id</th>
+          <th>User Id</th>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Level</th>
+          <th>Total Score</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let question of questions.slice(0,10)"> -->
+          <tr *ngFor="let result of result">
+          <td>{{ result.testId }}</td>
+          <td>{{ result.userId}}</td>
+          <td>{{ result.date }}</td>
+          <td>{{result.category }}</td>
+          <td>{{result.level }}</td>
+          <td>{{result.marks }}</td>
+          <td>{{result.totalScore }}</td>
+        
+
+          <td>
+            <!-- delete btn -->
+            <button (click)="deleteResult(result)" class="btn btn-warning">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+
+            <!-- edit btn -->
+            <button
+              (click)="updateResult(result)"
+              style="margin-left: 20px"
+              class="btn btn-info text-white"
+            >
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
